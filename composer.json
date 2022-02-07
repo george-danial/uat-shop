@@ -1,0 +1,137 @@
+{
+    "name": "magento/project-community-edition",
+    "description": "eCommerce Platform for Growth (Community Edition)",
+    "type": "project",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "laminas/laminas-dependency-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "magento/inventory-composer-installer": true,
+            "magento/*": true,
+            "unnecessary/plugin": false
+        }
+    },
+    "version": "2.4.3-p1",
+    "require": {
+        "bobmotor/magento-2-gulp": "^1.5",
+        "dompdf/dompdf": "^1.1",
+        "laminas/laminas-barcode": "^2.11",
+        "magento/composer-dependency-version-audit-plugin": "^0.1.1",
+        "magento/composer-root-update-plugin": "^2.0",
+        "magento/product-community-edition": "2.4.3-p1",
+        "msp/devtools": "^1.2",
+        "spatie/simple-excel": "^1.13",
+        "stripe/stripe-php": "^7.112",
+        "tijsverkoyen/css-to-inline-styles": "^2.2",
+        "twilio/sdk": "^6.33",
+        "wikimedia/less.php": "^3.1",
+        "yireo/magento2-webp2": "^0.11.4"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "**/dev/**",
+            "**/update/**",
+            "**/Test/**"
+        ],
+        "files": [
+            "app/etc/NonComposerComponentRegistration.php"
+        ],
+        "psr-0": {
+            "": [
+                "app/code/",
+                "generated/code/"
+            ]
+        },
+        "psr-4": {
+            "Magento\\": "app/code/Magento/",
+            "Magento\\Framework\\": "lib/internal/Magento/Framework/",
+            "Magento\\Setup\\": "setup/src/Magento/Setup/"
+        }
+    },
+    "require-dev": {
+        "allure-framework/allure-phpunit": "~1.4",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "friendsofphp/php-cs-fixer": "~2.18.1",
+        "lusitanian/oauth": "~0.8.10",
+        "mage2tv/magento-cache-clean": "^1.0",
+        "magento/magento-coding-standard": "*",
+        "magento/magento2-functional-testing-framework": "^3.0",
+        "pdepend/pdepend": "~2.7.1",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "phpmd/phpmd": "^2.8.0",
+        "phpstan/phpstan": "^0.12.77",
+        "phpunit/phpunit": "^9",
+        "sebastian/phpcpd": "^6.0.3",
+        "squizlabs/php_codesniffer": "~3.5.4",
+        "symfony/finder": "^5.2"
+    },
+    "conflict": {
+        "gene/bluefoot": "*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Magento\\PhpStan\\": "dev/tests/static/framework/Magento/PhpStan/",
+            "Magento\\Sniffs\\": "dev/tests/static/framework/Magento/Sniffs/",
+            "Magento\\TestFramework\\Inspection\\": "dev/tests/static/framework/Magento/TestFramework/Inspection/",
+            "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/",
+            "Magento\\Tools\\": "dev/tools/Magento/Tools/",
+            "Magento\\Tools\\Sanity\\": "dev/build/publication/sanity/Magento/Tools/Sanity/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "repositories": {
+        "webkul-repo": {
+            "type": "composer",
+            "url": "https://magerepo.webkul.com/"
+        },
+        "0": {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    },
+    "extra": {
+        "magento-force": "override"
+    },
+    "replace": {
+        "magento/module-braintree": "*",
+        "magento/module-braintree-graph-ql": "*",
+        "braintree/braintree_php": "*",
+        "braintree/braintree": "*",
+        "dotmailer/dotmailer-magento2-extension": "*",
+        "dotmailer/dotmailer-magento2-extension-package": "*",
+        "dotmailer/dotmailer-magento2-extension-enterprise": "*",
+        "dotmailer/dotmailer-magento2-extension-enterprise-package": "*",
+        "dotmailer/dotmailer-magento2-extension-chat": "*",
+        "dotmailer/dotmailer-magento2-extension-b2b": "*",
+        "dotmailer/dotmailer-magento2-extension-sms": "*",
+        "klarna/m2-payments": "*",
+        "klarna/module-core": "*",
+        "klarna/module-kp": "*",
+        "klarna/module-kp-graph-ql": "*",
+        "klarna/module-ordermanagement": "*",
+        "klarna/module-onsitemessaging": "*",
+        "paypal/module-braintree": "*",
+        "paypal/module-braintree-core": "*",
+        "paypal/module-braintree-graph-ql": "*",
+        "temando/module-shipping": "*",
+        "temando/module-shipping-m2": "*",
+        "temando/module-shipping-remover": "*",
+        "vertex/product-magento-module": "*",
+        "vertex/module-tax": "*",
+        "vertex/sdk": "*",
+        "vertexinc/module-tax-staging": "*",
+        "vertexinc/product-magento-module": "*",
+        "vertexinc/product-magento-module-commerce": "*",
+        "vertex/module-address-validation": "*",
+        "vertex/module-tax-staging": "*",
+        "yotpo/magento2-module-yotpo-reviews": "*",
+        "yotpo/magento2-module-yotpo-reviews-bundle": "*"
+    }
+}
